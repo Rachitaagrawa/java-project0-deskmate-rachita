@@ -36,6 +36,7 @@ public class App {
                         if (role != Role.ADMIN) System.out.println("Access denied.");
                         else cfg.deskController().menu();
                     }
+
                     case 2 -> cfg.bookingController().menu();
                     case 3 -> cfg.reportController().menu();
                     case 0 -> {

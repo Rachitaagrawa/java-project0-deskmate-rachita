@@ -14,6 +14,18 @@ import com.deskmate.dao.implementation.JdbcReportDao;
 import com.deskmate.services.BookingService;
 import com.deskmate.services.DeskService;
 import com.deskmate.services.ReportService;
+import com.deskmate.dao.BookingDao;
+import com.deskmate.dao.DeskDao;
+import com.deskmate.dao.PaymentDao;
+import com.deskmate.dao.implementation.JdbcBookingDao;
+import com.deskmate.dao.implementation.JdbcDeskDao;
+import com.deskmate.dao.implementation.JdbcPaymentDao;
+import com.deskmate.services.BookingService;
+
+import com.deskmate.controller.DeskController;
+import com.deskmate.dao.DeskDao;
+import com.deskmate.dao.implementation.JdbcDeskDao;
+import com.deskmate.services.DeskService;
 
 public class AppConfig 
 {
@@ -35,6 +47,6 @@ public class AppConfig
         ReportDao reportDao = new JdbcReportDao();
         ReportService reportService = new ReportService(reportDao);
         return new ReportController(reportService);
-    }
+  }
 }
 
